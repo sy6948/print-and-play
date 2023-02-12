@@ -4,13 +4,13 @@ from CardPrinter import CardsPrinter
 def main():
     # arguments parser
     parser = argparse.ArgumentParser(
-        description = 'This program convert multiple images to A4 pages for "print and play" purpose.'
+        description = 'This program merge multiple images to A4 png for "print and play" purpose.'
     )
 
     # add arguments
-    parser.add_argument("input_folder", help="the folder of input images")
-    parser.add_argument("-p", "--output_prefix", help="the file prefix of the output images", default="card ")
-    parser.add_argument("-o", "--output_folder", help="the folder for export the A4 pages", default="output")
+    parser.add_argument("-i", "--input-folder", help="the folder of input images", default="input")
+    parser.add_argument("-p", "--output-prefix", help="the file prefix of the output images", default="output ")
+    parser.add_argument("-o", "--output-folder", help="the folder for export the A4 pages", default="output")
     parser.add_argument("-ch", "--card-height", help="height of each card in Millimeter (mm)", type=int, default=88)
     parser.add_argument("-cw", "--card-width", help="width of each card in Millimeter (mm)", type=int, default=63)
     parser.add_argument("-px", "--card-padding-x", help="left and right padding in Millimeter (mm)", type=int, default=1)
